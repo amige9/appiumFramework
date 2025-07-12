@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-12T22:36:33 WAT" name="Suite" finished-at="2025-07-12T22:39:33 WAT" duration-ms="179151">
+    <groups>
+      <group name="Smoke">
+        <method signature="eCommerce_tc_4_Hybrid.FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7857fe2]" name="FillForm" class="framework.AppiumFramework.eCommerce_tc_4_Hybrid"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2025-07-12T22:36:33 WAT" name="End to end Framework Test" finished-at="2025-07-12T22:39:32 WAT" duration-ms="178607">
+      <class name="framework.AppiumFramework.eCommerce_tc_4_Hybrid">
+        <test-method is-config="true" signature="ConfigAppium()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7857fe2]" started-at="2025-07-12T22:36:33 WAT" name="ConfigAppium" finished-at="2025-07-12T22:37:18 WAT" duration-ms="44825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigAppium -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7857fe2]" started-at="2025-07-12T22:37:19 WAT" name="preSetup" finished-at="2025-07-12T22:37:21 WAT" duration-ms="2050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7857fe2]" started-at="2025-07-12T22:37:21 WAT" name="FillForm" data-provider="getData" finished-at="2025-07-12T22:38:24 WAT" duration-ms="63598" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{gender=male, name=olamide ige, country=Azerbaijan}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7857fe2]" started-at="2025-07-12T22:38:24 WAT" name="preSetup" finished-at="2025-07-12T22:38:26 WAT" duration-ms="1872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7857fe2]" started-at="2025-07-12T22:38:26 WAT" name="FillForm" data-provider="getData" finished-at="2025-07-12T22:39:27 WAT" duration-ms="60256" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{gender=female, name=Micheal Thompson, country=Belgium}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7857fe2]" started-at="2025-07-12T22:39:27 WAT" name="tearDown" finished-at="2025-07-12T22:39:32 WAT" duration-ms="5469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- framework.AppiumFramework.eCommerce_tc_4_Hybrid -->
+    </test> <!-- End to end Framework Test -->
+    <test started-at="2025-07-12T22:39:33 WAT" name="Framework 2" finished-at="2025-07-12T22:39:33 WAT" duration-ms="1">
+    </test> <!-- Framework 2 -->
+  </suite> <!-- Suite -->
+</testng-results>
