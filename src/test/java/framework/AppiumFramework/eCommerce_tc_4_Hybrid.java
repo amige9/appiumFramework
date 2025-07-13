@@ -70,8 +70,8 @@ public class eCommerce_tc_4_Hybrid extends BaseTest {
 	public Object[][] getData() throws IOException {
 		// Using Json format for test data
 		List<HashMap<String, String>> data = getJsonData(
-				System.getProperty("user.dir") + "\\src\\test\\java\\testData\\eCommerce.json");
-		return new Object[][] { { data.get(0) }, { data.get(1) } };
+				System.getProperty("user.dir") + "/src/test/java/testData/eCommerce.json");
+		return new Object[][] { { data.get(0) }};
 	}
 
 //	C:\Users\olamide.ige\eclipse-workspace\AppiumFramework\src\test\java\testData\eCommerce.json

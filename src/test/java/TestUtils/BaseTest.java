@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
@@ -73,8 +75,15 @@ public class BaseTest extends AppiumUtils{
 //        service = AppiumDriverLocalService.buildService(builder);
 //        service.start();
 		Properties properties = new Properties();
-		FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\java\\resources\\data.properties");
+		Path filePath = Paths.get(System.getProperty("user.dir"), 
+			    "src", "main", "java", "resources", "data.properties");
+		
+//		FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\java\\resources\\data.properties");
+//		properties.load(fileInputStream);
+		FileInputStream fileInputStream = new FileInputStream(filePath.toFile());
 		properties.load(fileInputStream);
+
+
 //		String ipAddress =  properties.getProperty("ipAddress");
 		String ipAddress = System.getProperty("ipAddress")!=null ?  System.getProperty("ipAddress") : properties.getProperty("ipAddress");
 		String port =  properties.getProperty("port");
@@ -83,11 +92,28 @@ public class BaseTest extends AppiumUtils{
 //        
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName(properties.getProperty("AndriodDeviceName"));
+		
+		// Get user home directory
+		String userHome = System.getProperty("user.home");
+		String osName = System.getProperty("os.name").toLowerCase();
+		
 		// Add this capability for automatic ChromeDriver management
+		// ChromeDriver path
+		String chromeDriverName = osName.contains("win") ? "chromedriver.exe" : "chromedriver";
+		String chromeDriverPath = userHome + File.separator + "Downloads" + File.separator + 
+		                         "software" + File.separator + "appium" + File.separator + 
+		                         "chromeDriver133" + File.separator + chromeDriverName;
+		options.setChromedriverExecutable(chromeDriverPath);
 		options.setChromedriverExecutable("C:\\Users\\olamide.ige\\Downloads\\software\\appium\\chromeDriver133\\chromedriver.exe");
 		
+		// App path using relative path from project root
+		String projectPath = System.getProperty("user.dir");
+		String appPath = projectPath + File.separator + "src" + File.separator + "test" + 
+		                File.separator + "java" + File.separator + "resources" + 
+		                File.separator + "General-Store.apk";
+		
 //		options.setApp("C:\\Users\\olamide.ige\\eclipse-workspace\\appiumFramework\\src\\test\\java\\resources\\ApiDemos-debug.apk");
-		options.setApp("C:\\Users\\olamide.ige\\eclipse-workspace\\appiumFramework\\src\\test\\java\\resources\\General-Store.apk");
+		options.setApp(appPath);
 
 		
 //		driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
@@ -106,11 +132,23 @@ public class BaseTest extends AppiumUtils{
 	
 
 	
-	@AfterClass(alwaysRun = true)
+//	@AfterClass(alwaysRun = true)
+//	public void tearDown() {
+//		driver.quit();
+//		service.stop();
+//	
+//	}
+	@AfterClass
 	public void tearDown() {
-		driver.quit();
-		service.stop();
-	
+	    if (driver != null) {
+	        try {
+	            driver.quit();
+	        } catch (Exception e) {
+	            System.err.println("Error quitting driver: " + e.getMessage());
+	        } finally {
+	            driver = null;
+	        }
+	    }
 	}
 
 }
