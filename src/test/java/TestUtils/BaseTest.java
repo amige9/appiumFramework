@@ -86,8 +86,8 @@ public class BaseTest extends AppiumUtils{
 		// Add this capability for automatic ChromeDriver management
 		options.setChromedriverExecutable("C:\\Users\\olamide.ige\\Downloads\\software\\appium\\chromeDriver133\\chromedriver.exe");
 		
-//		options.setApp("C:\\Users\\olamide.ige\\eclipse-workspace\\appiumTutorial\\src\\test\\java\\resources\\ApiDemos-debug.apk");
-		options.setApp("C:\\Users\\olamide.ige\\eclipse-workspace\\appiumTutorial\\src\\test\\java\\resources\\General-Store.apk");
+//		options.setApp("C:\\Users\\olamide.ige\\eclipse-workspace\\appiumFramework\\src\\test\\java\\resources\\ApiDemos-debug.apk");
+		options.setApp("C:\\Users\\olamide.ige\\eclipse-workspace\\appiumFramework\\src\\test\\java\\resources\\General-Store.apk");
 
 		
 //		driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
