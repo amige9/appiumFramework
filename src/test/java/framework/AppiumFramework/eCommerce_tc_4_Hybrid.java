@@ -77,7 +77,7 @@ public class eCommerce_tc_4_Hybrid extends BaseTest {
 //	C:\Users\olamide.ige\eclipse-workspace\AppiumFramework\src\test\java\testData\eCommerce.json
 //	System.getProperty("user.dir")+ "\\src\\test\\java\\testData\\eCommerce.json"
 
-	@Test(dataProvider = "getData", groups = { "Smoke" })
+	@Test(dataProvider = "getData", groups = {"Smoke"})
 	public void FillForm(HashMap<String, String> input) throws InterruptedException {
 
 		FormPage formPage = new FormPage(driver);
