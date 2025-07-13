@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-13T04:45:21 WAT" name="Default suite" finished-at="2025-07-13T04:46:01 WAT" duration-ms="40884">
+  <suite started-at="2025-07-13T15:00:30 WAT" name="Default suite" finished-at="2025-07-13T15:02:25 WAT" duration-ms="115050">
     <groups>
       <group name="Smoke">
-        <method signature="eCommerce_tc_4_Hybrid.FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" name="FillForm" class="framework.AppiumFramework.eCommerce_tc_4_Hybrid"/>
+        <method signature="eCommerce_tc_4_Hybrid.FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@45c7e403]" name="FillForm" class="framework.AppiumFramework.eCommerce_tc_4_Hybrid"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-07-13T04:45:21 WAT" name="Default test" finished-at="2025-07-13T04:46:01 WAT" duration-ms="40884">
+    <test started-at="2025-07-13T15:00:30 WAT" name="Default test" finished-at="2025-07-13T15:02:25 WAT" duration-ms="115050">
       <class name="framework.AppiumFramework.eCommerce_tc_4_Hybrid">
-        <test-method is-config="true" signature="ConfigAppium()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-13T04:45:21 WAT" name="ConfigAppium" finished-at="2025-07-13T04:45:32 WAT" duration-ms="11887" status="PASS">
+        <test-method is-config="true" signature="ConfigAppium()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@45c7e403]" started-at="2025-07-13T15:00:30 WAT" name="ConfigAppium" finished-at="2025-07-13T15:01:30 WAT" duration-ms="59746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigAppium -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-13T04:45:33 WAT" name="preSetup" finished-at="2025-07-13T04:45:33 WAT" duration-ms="319" status="PASS">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@45c7e403]" started-at="2025-07-13T15:01:30 WAT" name="preSetup" finished-at="2025-07-13T15:01:33 WAT" duration-ms="3390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-13T04:45:33 WAT" name="FillForm" data-provider="getData" finished-at="2025-07-13T04:46:01 WAT" duration-ms="27690" status="PASS">
+        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@45c7e403]" started-at="2025-07-13T15:01:33 WAT" name="FillForm" data-provider="getData" finished-at="2025-07-13T15:02:22 WAT" duration-ms="48523" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-13T04:46:01 WAT" name="tearDown" finished-at="2025-07-13T04:46:01 WAT" duration-ms="766" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@45c7e403]" started-at="2025-07-13T15:02:22 WAT" name="tearDown" finished-at="2025-07-13T15:02:25 WAT" duration-ms="2985" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
