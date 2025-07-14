@@ -58,22 +58,7 @@ public class BaseTest extends AppiumUtils{
 
 	@BeforeClass(alwaysRun = true)
 	public void ConfigAppium() throws URISyntaxException, IOException {
-//        // Create a custom environment map with Android SDK paths
-//        Map<String, String> env = new HashMap<>(System.getenv());
-//        env.put("ANDROID_HOME", "C:\\Users\\olamide.ige\\AppData\\Local\\Android\\Sdk");
-//        env.put("ANDROID_SDK_ROOT", "C:\\Users\\olamide.ige\\AppData\\Local\\Android\\Sdk");
-// 
-//
-//        
-//        // Create and start the Appium service
-//        AppiumServiceBuilder builder = new AppiumServiceBuilder()
-//            .withAppiumJS(new File("C:\\Users\\olamide.ige\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-//            .withIPAddress("127.0.0.1")
-//            .usingPort(4723)
-//            .withEnvironment(env); 
-//            
-//        service = AppiumDriverLocalService.buildService(builder);
-//        service.start();
+
 		Properties properties = new Properties();
 		Path filePath = Paths.get(System.getProperty("user.dir"), 
 			    "src", "main", "java", "resources", "data.properties");
@@ -95,19 +80,20 @@ public class BaseTest extends AppiumUtils{
 		
 		// Get user home directory
 		String userHome = System.getProperty("user.home");
+		String projectPath = System.getProperty("user.dir");
 		String osName = System.getProperty("os.name").toLowerCase();
 		
 		// Add this capability for automatic ChromeDriver management
 		// ChromeDriver path
 		String chromeDriverName = osName.contains("win") ? "chromedriver.exe" : "chromedriver";
-		String chromeDriverPath = userHome + File.separator + "Downloads" + File.separator + 
-		                         "software" + File.separator + "appium" + File.separator + 
-		                         "chromeDriver133" + File.separator + chromeDriverName;
+		String chromeDriverPath = projectPath + File.separator + "src" + File.separator + 
+		                         "test" + File.separator + "java" + File.separator + 
+		                         "drivers" + File.separator + chromeDriverName;
 		options.setChromedriverExecutable(chromeDriverPath);
-		options.setChromedriverExecutable("C:\\Users\\olamide.ige\\Downloads\\software\\appium\\chromeDriver133\\chromedriver.exe");
+//		options.setChromedriverExecutable("C:\\Users\\olamide.ige\\Downloads\\software\\appium\\chromeDriver133\\chromedriver.exe");
 		
 		// App path using relative path from project root
-		String projectPath = System.getProperty("user.dir");
+//		String projectPath = System.getProperty("user.dir");
 		String appPath = projectPath + File.separator + "src" + File.separator + "test" + 
 		                File.separator + "java" + File.separator + "resources" + 
 		                File.separator + "General-Store.apk";
@@ -143,6 +129,7 @@ public class BaseTest extends AppiumUtils{
 	    if (driver != null) {
 	        try {
 	            driver.quit();
+	            service.stop();
 	        } catch (Exception e) {
 	            System.err.println("Error quitting driver: " + e.getMessage());
 	        } finally {
