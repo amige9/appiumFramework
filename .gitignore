@@ -7,6 +7,31 @@
 # BlueJ files
 *.ctxt
 
+# Maven build artifacts
+target/
+
+# TestNG output
+test-output/
+
+# ExtentReports (if you want fresh reports each time)
+reports/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
