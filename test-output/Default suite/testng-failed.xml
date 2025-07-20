@@ -5,7 +5,7 @@
     <classes>
       <class name="framework.AppiumFramework.eCommerce_tc_4_Hybrid">
         <methods>
-          <include name="FillForm"/>
+          <include name="FillForm" invocation-numbers="0"/>
           <include name="ConfigAppium"/>
           <include name="tearDown"/>
           <include name="preSetup"/>

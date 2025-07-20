@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-19T01:54:33 WAT" name="Default suite" finished-at="2025-07-19T01:55:19 WAT" duration-ms="45788">
+  <suite started-at="2025-07-21T00:39:45 WAT" name="Suite" finished-at="2025-07-21T00:40:27 WAT" duration-ms="41657">
     <groups>
       <group name="Smoke">
-        <method signature="eCommerce_tc_4_Hybrid.FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" name="FillForm" class="framework.AppiumFramework.eCommerce_tc_4_Hybrid"/>
+        <method signature="eCommerce_tc_4_Hybrid.FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7f2cfe3f]" name="FillForm" class="framework.AppiumFramework.eCommerce_tc_4_Hybrid"/>
+        <method signature="IOSBasics.IOSBasicsTest()[pri:0, instance:framework.AppiumFramework.IOSBasics@15f47664]" name="IOSBasicsTest" class="framework.AppiumFramework.IOSBasics"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-07-19T01:54:33 WAT" name="Default test" finished-at="2025-07-19T01:55:19 WAT" duration-ms="45788">
-      <class name="framework.AppiumFramework.eCommerce_tc_4_Hybrid">
-        <test-method is-config="true" signature="ConfigAppium()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-19T01:54:33 WAT" name="ConfigAppium" finished-at="2025-07-19T01:54:39 WAT" duration-ms="5180" status="PASS">
+    <test started-at="2025-07-21T00:39:45 WAT" name="IOS App test" finished-at="2025-07-21T00:39:56 WAT" duration-ms="11486">
+      <class name="framework.AppiumFramework.IOSBasics">
+        <test-method is-config="true" signature="ConfigAppium()[pri:0, instance:framework.AppiumFramework.IOSBasics@15f47664]" started-at="2025-07-21T00:39:45 WAT" name="ConfigAppium" finished-at="2025-07-21T00:39:49 WAT" duration-ms="4372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigAppium -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-19T01:54:39 WAT" name="preSetup" finished-at="2025-07-19T01:54:39 WAT" duration-ms="340" status="PASS">
+        <test-method signature="IOSBasicsTest()[pri:0, instance:framework.AppiumFramework.IOSBasics@15f47664]" started-at="2025-07-21T00:39:49 WAT" name="IOSBasicsTest" finished-at="2025-07-21T00:39:55 WAT" duration-ms="6013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IOSBasicsTest -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:framework.AppiumFramework.IOSBasics@15f47664]" started-at="2025-07-21T00:39:49 WAT" name="preSetup" finished-at="2025-07-21T00:39:49 WAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-19T01:54:39 WAT" name="FillForm" data-provider="getData" finished-at="2025-07-19T01:55:18 WAT" duration-ms="39438" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:framework.AppiumFramework.IOSBasics@15f47664]" started-at="2025-07-21T00:39:55 WAT" name="tearDown" finished-at="2025-07-21T00:39:56 WAT" duration-ms="1071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- framework.AppiumFramework.IOSBasics -->
+    </test> <!-- IOS App test -->
+    <test started-at="2025-07-21T00:39:57 WAT" name="Framework 2" finished-at="2025-07-21T00:39:57 WAT" duration-ms="0">
+    </test> <!-- Framework 2 -->
+    <test started-at="2025-07-21T00:39:45 WAT" name="End to end Framework Test" finished-at="2025-07-21T00:40:27 WAT" duration-ms="41657">
+      <class name="framework.AppiumFramework.eCommerce_tc_4_Hybrid">
+        <test-method is-config="true" signature="ConfigAppium()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7f2cfe3f]" started-at="2025-07-21T00:39:45 WAT" name="ConfigAppium" finished-at="2025-07-21T00:39:49 WAT" duration-ms="3851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigAppium -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7f2cfe3f]" started-at="2025-07-21T00:39:49 WAT" name="preSetup" finished-at="2025-07-21T00:39:49 WAT" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method signature="FillForm(java.util.HashMap)[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7f2cfe3f]" started-at="2025-07-21T00:39:49 WAT" name="FillForm" data-provider="getData" finished-at="2025-07-21T00:40:26 WAT" duration-ms="36837" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,11 +52,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@38425407]" started-at="2025-07-19T01:55:18 WAT" name="tearDown" finished-at="2025-07-19T01:55:19 WAT" duration-ms="661" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:framework.AppiumFramework.eCommerce_tc_4_Hybrid@7f2cfe3f]" started-at="2025-07-21T00:40:26 WAT" name="tearDown" finished-at="2025-07-21T00:40:27 WAT" duration-ms="624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- framework.AppiumFramework.eCommerce_tc_4_Hybrid -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- End to end Framework Test -->
+  </suite> <!-- Suite -->
 </testng-results>

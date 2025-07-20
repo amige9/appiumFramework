@@ -6,14 +6,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,7 +20,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
@@ -34,36 +31,12 @@ public class AppiumUtils {
 //	AppiumDriver driver;
 //	
 //	public AppiumUtils(AppiumDriver driver) 
-//	{
+//	{	
+//		super();
 //		this.driver = driver;
 //	}
-//	
-	public double getFormattedAmount(String amount) 
-	{
-		Double price = Double.parseDouble(amount.substring(1));
-		return price;
-	}
-	
-	public void waitForElementToAppear(WebElement element, AppiumDriver driver) 
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
-		wait.until(ExpectedConditions.attributeContains((element), "text", "Cart"));
-	}
-	
-	public List<HashMap<String, String>> getJsonData(String jsonFilePath) throws IOException {
-		
-		// Convert json file content  to json string
-//		String jsonContent = FileUtils.readFileToStr(System.getProperty("user.dir")+ "src\\test\\java\\testData\\eCommerce.json");
-		String jsonContent = FileUtils.readFileToString(new File(jsonFilePath), StandardCharsets.UTF_8);
-		
-		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
-				new TypeReference<List<HashMap<String, String>>> (){
-				});
-		
-		return data;
 
-	}
+
 	
     /**
      * Starts Appium server with cross-platform support
@@ -327,16 +300,33 @@ public class AppiumUtils {
        throw new RuntimeException("❌ Could not find Node.js executable. Please ensure Node.js is installed. " +
            "Searched system PATH and common installation directories.");
    }
-
-
+   
+	public double getFormattedAmount(String amount) 
+	{
+		Double price = Double.parseDouble(amount.substring(1));
+		return price;
+	}
 	
-//	public String getScreenshot(String testCaseName, AppiumDriver driver) throws IOException {
-//		File source =  driver.getScreenshotAs(OutputType.FILE);
-//		String destinationFile = System.getProperty("user.dir")+"\\reports"+testCaseName+".png";
-//		FileUtils.copyFile(source, new File(destinationFile));
-//		return destinationFile;
-//		
-//	}
+	public void waitForElementToAppear(WebElement element, AppiumDriver driver) 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
+		wait.until(ExpectedConditions.attributeContains((element), "text", "Cart"));
+	}
+	
+	public List<HashMap<String, String>> getJsonData(String jsonFilePath) throws IOException {
+		
+		// Convert json file content  to json string
+//		String jsonContent = FileUtils.readFileToStr(System.getProperty("user.dir")+ "src\\test\\java\\testData\\eCommerce.json");
+		String jsonContent = FileUtils.readFileToString(new File(jsonFilePath), StandardCharsets.UTF_8);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
+				new TypeReference<List<HashMap<String, String>>> (){
+				});
+		
+		return data;
+	}
+
 	   public String getScreenshotPath(String testCaseName, AppiumDriver driver) throws IOException{
 	        try {
 	            File source = driver.getScreenshotAs(OutputType.FILE);
@@ -348,5 +338,6 @@ public class AppiumUtils {
 	            return null;
 	        }
 	    }
+	   
 
 }
